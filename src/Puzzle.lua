@@ -147,9 +147,6 @@ function Puzzle:get3Matches()
                         return {row = v.row, col = v.col}
                     end)
                     :uniq()
-                    :each(function(d)
-                        d.isHidden = true
-                    end)
                     :value()
         _.push(ret, u)
     end
